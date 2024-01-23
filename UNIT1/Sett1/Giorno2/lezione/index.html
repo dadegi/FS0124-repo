@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tabelle</title>
+	</head>
+
+	<body>
+		<ul>
+			<li>
+				<a href="index.html" title="tabelle">Tabelle</a>
+			</li>
+			<li>
+				<a href="form.html" title="forms">Forms</a>
+			</li>
+		</ul>
+
+		<h1>TABELLE</h1>
+		<h2>Tabella semplice</h2>
+
+		<table>
+			<caption>Tabella Anagrafica</caption>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>Cognome</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Mario Giovanni</td>
+					<td>Rossi-Bianchi</td>
+					<td>mario@rossi.com</td>
+				</tr>
+				<tr>
+					<td>Aldo Luca</td>
+					<td>Bianchi-Verdi</td>
+					<td>aldo@bianchi.com</td>
+				</tr>
+				<tr>
+					<td>Annamaria</td>
+					<td>Verdi-Rossi</td>
+					<td>anna@verdi.com</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>Nomi: 3</td>
+					<td>cognomi: 3</td>
+					<td>email: 3</td>
+				</tr>
+			</tfoot>
+		</table>
+
+		<hr />
+
+		<h2>Tabella complessa</h2>
+
+		<table>
+			<caption>Registro presenze</caption>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>email</th>
+					<th>Presenze</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Pippo</td>
+					<td>pippo@gmail.com</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>Pluto</td>
+					<td>pluto@gmail.com</td>
+					<td>32</td>
+				</tr>
+				<tr>
+					<td>Paperino</td>
+					<td>paperino@gmail.com</td>
+					<td>18</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2"><b>Totale presenze:</b></td>
+					<td><strong>75</strong></td>
+				</tr>
+			</tfoot>
+		</table>
+
+		<hr />
+
+		<h2>Tabella grafica</h2>
+
+		<table>
+			<tbody>
+				<tr>
+					<td>Cella 1 riga 1</td>
+					<td>Cella 2 riga 1</td>
+					<td>Cella 3 riga 1</td>
+					<td>Cella 4 riga 1</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Cella 1 riga 1-2</td>
+					<td colspan="2">Cella 2-3 riga 2</td>
+					<td>Cella 4 riga 2</td>
+				</tr>
+				<tr>
+					<td colspan="3">Cella 2-3-4 riga 3</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

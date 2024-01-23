@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+
+	<body>
+		<ul>
+			<li>
+				<a href="index.html" title="tabelle">Tabelle</a>
+			</li>
+			<li>
+				<a href="form.html" title="forms">Forms</a>
+			</li>
+		</ul>
+
+		<h1>FORMS</h1>
+
+		<h2>Form semplice</h2>
+
+		<form method="post">
+			<label for="nome">Nome</label>
+			&nbsp;
+			<input type="text" id="nome" name="nome" />
+			<label for="cognome">Cognome</label>
+			&nbsp;
+			<input type="text" id="cognome" name="cognome" required />
+			<label for="email">Email</label>
+			&nbsp;
+			<input
+				type="email"
+				id="email"
+				name="email"
+				required
+				minlength="9" />
+			<label for="dataNascita">Data di nascita</label>
+			&nbsp;
+			<input type="date" id="dataNascita" name="dataNascita" />
+			<br />
+			<br />
+			<button type="submit" id="invia">INVIA</button>
+			&nbsp;
+			<button type="reset" id="cancella">CANCELLA</button>
+		</form>
+
+		<hr />
+
+		<h2>Form complesso</h2>
+
+		<form>
+			<!-- Gruppo anagrafica -->
+			<fieldset>
+				<legend>Anagrafica</legend>
+				<label for="nome">Nome</label>
+				&nbsp;
+				<input type="text" id="nome" name="nome" />
+				<label for="cognome">Cognome</label>
+				&nbsp;
+				<input type="text" id="cognome" name="cognome" required />
+				&nbsp;
+				<label for="dataNascita">Data di nascita</label>
+				&nbsp;
+				<input type="date" id="dataNascita" name="dataNascita" />
+				<br />
+				<br />
+				<label for="indirizzo">Indirizzo</label>
+				<textarea
+					name="indirizzo"
+					id="indirizzo"
+					rows="2"
+					cols="50"
+					placeholder="Inserisci il tuo indirizzo"></textarea>
+				<label for="telefono">Telefono</label>
+				&nbsp;
+				<input
+					type="tel"
+					id="telefono"
+					name="telefono"
+					placeholder="Es. 398-85767458" />
+				&nbsp;
+				<label for="email">Email</label>
+				&nbsp;
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required
+					minlength="9" />
+			</fieldset>
+			<!-- Gruppo preferenze -->
+			<fieldset>
+				<legend>Preferenze</legend>
+				<!-- Tipo di corso -->
+				<label for="corso">Corso scelto</label>
+				&nbsp;
+				<select id="corso" name="corso">
+					<option value="" selected></option>
+					<option value="FE">Front-End</option>
+					<option value="BE">Back-End</option>
+					<option value="FS">Full-Stack</option>
+				</select>
+				<!-- Tecnologie -->
+				<h4>Tecnologie</h4>
+				<label for="html">HTML</label>
+				<input type="checkbox" id="html" name="html" />
+				<label for="css">CSS</label>
+				<input type="checkbox" id="css" name="css" />
+				<label for="javascript">JavaScript</label>
+				<input type="checkbox" id="javascript" name="javascript" />
+				<!-- Tipo di frequenza -->
+				<h4>Tipo di frequenza</h4>
+				<input type="radio" id="part" name="frequenza" value="part" />
+				<label for="part">Part-time</label>
+				<br />
+				<input type="radio" id="full" name="frequenza" value="full" />
+				<label for="full">Full-time</label>
+				<br />
+				<input type="radio" id="serale" name="frequenza" value="serale" />
+				<label for="serale">Serale</label>
+			</fieldset>
+			<button type="submit" id="invia">INVIA</button>
+			&nbsp;
+			<button type="reset" id="cancella">CANCELLA</button>
+		</form>
+	</body>
+</html>
