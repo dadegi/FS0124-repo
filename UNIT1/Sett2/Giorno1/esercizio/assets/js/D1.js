@@ -61,7 +61,8 @@ console.log(name);
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
 
-document.getElementById('esercizio6').innerHTML = 4 - x;
+let altroNumero = 4
+document.getElementById('esercizio6').innerHTML = altroNumero - x;
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
