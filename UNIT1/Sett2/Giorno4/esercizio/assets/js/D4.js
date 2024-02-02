@@ -129,6 +129,22 @@ console.log(reverseString('Pippo'));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function upperFirst(stringa) {
+    let parole = stringa.split(' ');
+    let risultato = [];
+    for (let i = 0; i < parole.length; i++) {
+        let primoCarattere = parole[i].charAt(0);
+        let maiuscolo = primoCarattere.toUpperCase();
+        let taglia = parole[i].slice(1);
+        let parolaFinale = maiuscolo + taglia;
+        risultato.push(parolaFinale);
+    }
+    return risultato.join(' ');
+}
+
+console.log('***Esercizio 8***');
+console.log(upperFirst('esercizio javascript giorno quattro'));
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
@@ -136,8 +152,26 @@ console.log(reverseString('Pippo'));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function cutString(stringa) {
+    return stringa.slice(1, stringa.length - 1);
+}
+
+console.log('***Esercizio 9***');
+console.log(cutString('front-end'));
+
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function giveMeRandom(numero) {
+    const mioArray = [];
+    for (let i = 0; i < numero; i++) {
+        mioArray.push(Math.floor(Math.random() * 11));
+    }
+    return mioArray;
+}
+
+console.log('***Esercizio 10***');
+console.log(giveMeRandom(6));
