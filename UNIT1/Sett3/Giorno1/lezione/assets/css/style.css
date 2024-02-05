@@ -1,0 +1,10 @@
+#test {
+    color: blue;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    color: red;
+}
