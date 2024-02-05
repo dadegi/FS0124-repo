@@ -11,16 +11,20 @@ function init() {
 function lancio() {
     numero1 = Math.floor(Math.random() * 6 + 1);
     numero2 = Math.floor(Math.random() * 6 + 1);
+    console.log(numero1 + numero2);
 
-    document.getElementById('lancio1').innerText += numero1;
-    document.getElementById('lancio2').innerText += numero2;
+    if ((numero1 + numero2) % 2 === 0) lancio();
+
+    document.getElementById('lancio1').innerText = 'Il lancio del primo dado è ' + numero1;
+    document.getElementById('lancio2').innerText = 'Il lancio del secondo dado è ' + numero2;
 }
 
 function verifica() {
     let somma = numero1 + numero2;
     document.getElementById('somma').innerText += somma;
     if (somma % 2 === 0) {
-        return true;
+        init();
+        // return true;
     } else {
         return false;
     }
@@ -33,8 +37,13 @@ function stampa() {
         riga.setAttribute('id', 'vittoria');
         riga.innerText = 'HAI VINTO';
     } else {
+        cancella(riga);
         riga.setAttribute('id', 'sconfitta');
         riga.innerText = 'HAI PERSO';
     }
     risultato.appendChild(riga);
+}
+
+function cancella(riga) {
+    riga.innerText = '';
 }
