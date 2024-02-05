@@ -1,10 +1,33 @@
 #test {
-    color: blue;
+	color: blue;
 }
 
 .box {
-    width: 150px;
-    height: 150px;
-    border: 2px solid black;
-    color: red;
+	width: 150px;
+	height: 150px;
+	border: 2px solid black;
+	color: red;
+}
+
+header nav ul {
+	margin-block-start: 10px;
+	padding-inline-start: 0px;
+}
+
+header nav ul li {
+	display: inline;
+	text-decoration: none;
+}
+
+#risultato h4 {
+    color: white;
+    display: inline;
+}
+
+#risultato #vittoria {
+    background-color: green;
+}
+
+#risultato #sconfitta {
+    background-color: red;
 }
