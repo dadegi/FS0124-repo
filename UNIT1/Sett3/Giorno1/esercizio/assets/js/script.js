@@ -7,9 +7,7 @@ const titolo = document.querySelector('h1');
 const changeTitle = function () {
 	let vecchioTitolo = titolo.innerText;
 	titolo.innerText =
-		'Nuovo titolo modificato da JS; il vecchio titolo era: ***' +
-		vecchioTitolo +
-		'***';
+		`Nuovo titolo modificato da JS; il vecchio titolo era: ***${vecchioTitolo}***`;
 };
 
 changeTitle();
