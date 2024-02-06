@@ -248,7 +248,12 @@ addRow(
 	Crea una funzione che nasconda le immagini della tabella quando eseguita
 */
 
-const hideAllImages = function () {};
+const hideAllImages = function () {
+	const immaginiTabella = document.querySelectorAll('table tr td img');
+	for (let i = 0; i < immaginiTabella.length; i++) {
+		immaginiTabella[i].style.display = 'none';
+	}
+};
 
 hideAllImages();
 
@@ -256,7 +261,18 @@ hideAllImages();
 	Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
 */
 
-const changeColorWithRandom = function () {};
+const changeColorWithRandom = function () {
+	const cambiaColore = document.getElementById('changeMyColor');
+	cambiaColore.style.cursor = 'pointer';
+	cambiaColore.addEventListener('click', function () {
+		let rosso = Math.round(Math.random() * 255);
+		let verde = Math.round(Math.random() * 255);
+		let blu = Math.round(Math.random() * 255);
+
+		let coloreRandom = 'rgb(' + rosso + ',' + verde + ',' + blu + ')';
+		cambiaColore.style.color = coloreRandom;
+	});
+};
 
 changeColorWithRandom();
 
@@ -264,6 +280,24 @@ changeColorWithRandom();
 	Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
 */
 
-const deleteVowels = function () {};
+const deleteVowels = function () {
+	const allElements = document.querySelectorAll(
+		'h1, h2, h3, p, a, li, th, td'
+	);
+	for (let i = 0; i < allElements.length; i++) {
+		allElements[i].innerText = [...allElements[i].innerText]
+			.filter(carattere => {
+				carattere = carattere.toLowerCase();
+				return (
+					carattere !== 'a' &&
+					carattere !== 'e' &&
+					carattere !== 'i' &&
+					carattere !== 'o' &&
+					carattere !== 'u'
+				);
+			})
+			.join('');
+	}
+};
 
 deleteVowels();
