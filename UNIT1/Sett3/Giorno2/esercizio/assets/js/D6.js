@@ -19,6 +19,17 @@
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 
+const arrayNumeri = [1, 6, 9, 23, 4, 75];
+const somma = () => {
+	let risultato = 0;
+	arrayNumeri.forEach((element) => {
+		risultato += element;
+	});
+	console.log(risultato);
+}
+
+somma();
+
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
@@ -35,6 +46,22 @@
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+function dispari() {
+	let arrayTutti = [];
+	for (let i = 1; i < 100; i++) {
+		arrayTutti.push(i);
+	}
+	let arrayDispari = [];
+	arrayTutti.forEach((element) => {
+		if(element % 2 !== 0) {
+			arrayDispari.push(element);
+		}
+	});
+	return arrayDispari;
+}
+
+console.log(dispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
@@ -170,6 +197,18 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
+function piuVecchio() {
+	let anno = 2100;
+	movies.forEach((element) => {
+		if (Number(element.Year) < anno) {
+			anno = Number(element.Year);
+		}
+	});
+	console.log(anno);
+}
+
+piuVecchio();
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
@@ -199,7 +238,8 @@ movies.forEach(element => {
 	elenco.appendChild(option);
 });
 
-document.getElementById('scegli').addEventListener('click', function() {
+document.getElementById('scegli').addEventListener('click', function(e) {
+	e.preventDefault();
 	let imdbID = elenco.value;
 	const filmScelto = movies.find((element) => {
 		return element.imdbID === imdbID;
