@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todolist</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+
+        <header>
+            <h1>Todolist</h1>
+        </header>
+
+        <div class="container">
+            <input type="text" id="task" name="task" required placeholder="Inserisci un task..." />&nbsp;
+            <button type="button" id="inserisci">INSERISCI</button>
+        </div>
+
+        <hr />
+
+        <div class="container">
+            <h2>ELENCO TASK</h2>
+            <div>
+                <ul id="lista"></ul>
+            </div>
+        </div>
+
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
