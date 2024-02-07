@@ -1,0 +1,8 @@
+.obbligatorio {
+    background-color: aquamarine;
+}
+
+#errore {
+    background-color: red;
+    color: white;
+}

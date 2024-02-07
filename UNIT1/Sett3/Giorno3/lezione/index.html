@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lezione UNIT1 settimana 3 giorno 3</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<h1>I FORM</h1>
+
+        <form id="form">
+            <label for="nome">NOME</label>&nbsp;
+            <input type="text" id="nome" name="nome" />&nbsp;
+            <label for="cognome">COGNOME</label>&nbsp;
+            <input type="text" id="cognome" name="cognome" class="obbligatorio" required />&nbsp;
+            <br /><br />
+            <label for="email">EMAIL</label>&nbsp;
+            <input type="email" id="email" name="email" class="obbligatorio" required />&nbsp;
+            <label for="password">PASSWORD</label>&nbsp;
+            <input type="password" id="password" class="obbligatorio" name="password" minlength="8" maxlength="20" title="Inserire una password tra 8 e 20 caratteri che contenga almeno una lettera maiuscola, almeno una lettera minuscola, almeno un numero e almeno un carattere tra !@#$%&?" required />&nbsp;
+            <br /><br />
+            <label for="eta">ETÀ</label>&nbsp;
+            <input type="number" id="eta" name="eta" min="18" max="70" />&nbsp;
+            <label for="telefono">CELLULARE</label>&nbsp;
+            <input type="tel" id="telefono" name="telefono" class="obbligatorio" required />&nbsp;
+            <br /><br />
+            <button type="submit" id="invia">INVIA</button>&nbsp;
+            <button type="reset" id="cancella">CANCELLA</button>
+        </form>
+
+        <h4>N.B. I campi evidenziati sono obbligatori</h4>
+        <h3 id="errore"></h3>
+
+        <hr />
+
+        <div id="grazie">
+            <h3>Grazie per esserti registrato, di seguito i dati inseriti</h3>
+            <h4 id="nomeForm">Nome:&nbsp;</h4>
+            <h4 id="cognomeForm">Cognome:&nbsp;</h4>
+            <h4 id="emailForm">Email:&nbsp;</h4>
+            <h4 id="passwordForm">Password:&nbsp;</h4>
+            <h4 id="etaForm">Eta:&nbsp;</h4>
+            <h4 id="telefonoForm">Cellulare:&nbsp;</h4>
+        </div>
+
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
