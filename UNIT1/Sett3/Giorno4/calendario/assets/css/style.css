@@ -1,66 +1,79 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
-    background-color: #131334;
-    color: #ebebeb;
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Outfit', sans-serif;
+	background-color: #131334;
+	color: #ebebeb;
+}
+
+.container {
+	max-width: 992px;
+	margin: 0 auto;
 }
 
 h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 1rem;
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 1rem;
 }
 
 form {
-    display: inline;
+	display: inline;
 }
 
 #addMeeting div {
-    display: inline-block;
-    margin-right: 48px;
-    vertical-align: bottom;
+	display: inline-block;
+	margin-right: 48px;
+	vertical-align: bottom;
 }
 
 input {
-    width: 130px;
-    min-height: 36px;
-    background-color: #0c0b1d;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: 700;
+	width: 130px;
+	min-height: 36px;
+	background-color: #0c0b1d;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	font-weight: 700;
+	color: #ebebeb;
 }
 
 input:focus {
-    background-color: #2d2a59;
+	background-color: #2d2a59;
 }
 
 input:focus::placeholder {
-    color: #615d9c;
+	color: #615d9c;
 }
 
 #newMeetingDay {
-    display: inline-block;
-    min-height: 40px;
+	display: inline-block;
+	min-height: 40px;
 }
 
 #newMeetingName {
-    width: 200px;
+	width: 200px;
+}
+
+#newMeetingTime::-webkit-calendar-picker-indicator {
+	background-color: #7a408a;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
 form button {
-    cursor: pointer;
-    background-color: #7a408a;
-    color: #efd7f5;
-    border: none;
-    width: 130px;
-    min-height: 36px;
-    font-weight: 700;
-    padding: 10px;
+	cursor: pointer;
+	background-color: #7a408a;
+	color: #efd7f5;
+	border: none;
+	width: 130px;
+	min-height: 36px;
+	font-weight: 700;
+	padding: 10px;
 }
 
 #appointments {
-    display: none;
+	display: none;
 }
