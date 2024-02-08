@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: darkslategray;
+    color: antiquewhite;
+}
+
+h1, #button {
+    text-align: center;
+}
+
+#tombolone {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.caselle {
+    margin-bottom: -5px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    text-align: center;
+    position: relative;
+}
+
+.numeri {
+    font-size: 26px;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.estratto {
+    background-color: red;
+}
