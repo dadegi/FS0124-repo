@@ -65,3 +65,39 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    main div {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    main div {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    footer {
+        position: relative;
+    }
+}
+
+@media print {
+    header, footer, main div:last-child {
+        display: none;
+    }
+
+    #principale {
+        border: 0;
+        width: 100%;
+    }
+
+    main p {
+        column-count: 1;
+        column-width: 100%;
+        column-rule: none;
+    }
+}
