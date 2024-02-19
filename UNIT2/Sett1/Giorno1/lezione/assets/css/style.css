@@ -95,6 +95,10 @@ footer {
         width: 100%;
     }
 
+    .sposta {
+        text-align: left;
+    }
+
     main p {
         column-count: 1;
         column-width: 100%;
