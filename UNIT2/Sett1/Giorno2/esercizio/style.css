@@ -1,0 +1,12 @@
+h1 span {
+	position: relative;
+}
+
+span img {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	width: 100%;
+	opacity: 0.6;
+}
