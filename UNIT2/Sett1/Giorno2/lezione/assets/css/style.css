@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer {
+    text-align: center;
+    background-color: rgb(42, 41, 41);
+    color: bisque;
+    padding: 10px;
+}
+
+header {
+    margin-top: -23px;
+    position: sticky;
+    top: 0;
+}
+
+#link {
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+}
+
+#link li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+#link li a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+main h2 {
+    text-align: center;
+}
+
+aside {
+    width: 85%;
+    margin: 0 auto;
+}
+
+aside article {
+    display: inline-block;
+    border: 1px solid black;
+    width: 49%;
+}
+
+#annunci {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#annunci img {
+    width: 24%;
+}
+
+.card {
+    display: inline;
+}
+
+#social {
+    width: 100px;
+    position: fixed;
+    right: 0;
+    top: 250px;
+    background-color: rgb(42, 41, 41);
+}
+
+#social div {
+    margin-bottom: 10px;
+}
+
+#social img {
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    #link li {
+        display: block;
+    }
+
+    main section {
+        padding: 20px;
+    }
+
+    aside {
+        width: 95%;
+    }
+
+    aside article {
+        display: block;
+        padding: 10px;
+        width: 95%;
+    }
+
+    #social {
+        width: 50px;
+        top: 150px;
+    }
+}
