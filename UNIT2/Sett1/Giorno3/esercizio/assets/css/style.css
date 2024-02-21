@@ -193,3 +193,10 @@ article {
 article img {
     width: 100%;
 }
+
+@media screen and (min-width: 576px) {
+    main h2 {
+        text-align: left;
+        margin-left: 20px;
+    }
+}
