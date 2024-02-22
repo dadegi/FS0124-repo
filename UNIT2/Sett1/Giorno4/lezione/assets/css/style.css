@@ -1,0 +1,196 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#jumbotron {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 20px;
+	border: 10px solid blue;
+	border-radius: 30px;
+	background-color: gray;
+	position: relative;
+	animation: bordo 0.5s alternate infinite;
+}
+
+@keyframes bordo {
+	from {
+		border-color: blue;
+	}
+	20% {
+		border-color: blueviolet;
+	}
+	40% {
+		border-color: red;
+	}
+	60% {
+		border-color: wheat;
+	}
+	80% {
+		border-color: red;
+	}
+	90% {
+		border-color: blueviolet;
+	}
+}
+
+#azione {
+	width: 80%;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#lampadina {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: blue;
+	animation: lampeggio 0.5s alternate infinite;
+}
+
+@keyframes lampeggio {
+	from {
+		background-color: blue;
+		width: 10px;
+		height: 10px;
+	}
+	20% {
+		background-color: blueviolet;
+		width: 20px;
+		height: 20px;
+	}
+	40% {
+		background-color: red;
+		width: 35px;
+		height: 35px;
+	}
+	60% {
+		background-color: wheat;
+		width: 50px;
+		height: 50px;
+	}
+	80% {
+		background-color: red;
+		width: 35px;
+		height: 35px;
+	}
+	90% {
+		background-color: blueviolet;
+		width: 20px;
+		height: 20px;
+	}
+}
+
+#titoli {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+	position: relative;
+	border: 2px solid black;
+}
+
+#titoli h1 {
+	position: absolute;
+	top: 0;
+	color: transparent;
+	animation: titoli 6s linear infinite 0s;
+}
+
+#titoli h1:nth-child(2) {
+	animation-delay: 2s;
+}
+
+#titoli h1:nth-child(3) {
+	animation-delay: 4s;
+}
+
+@keyframes titoli {
+	from {
+		color: transparent;
+		top: -20px;
+	}
+	25% {
+		color: black;
+		top: 0px;
+	}
+	50% {
+		color: transparent;
+		top: 20px;
+	}
+}
+
+#carousel {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+#carousel img {
+	width: 20%;
+	border: 3px solid black;
+	position: absolute;
+	right: 0;
+	opacity: 0%;
+	animation: immagini 10s linear infinite 0s;
+}
+
+#carousel:hover img {
+	animation-delay: 0s;
+	animation-play-state: paused;
+}
+
+@keyframes immagini {
+	from {
+		opacity: 0%;
+		filter: grayscale(100%);
+		right: 0;
+	}
+	20% {
+		opacity: 50%;
+		filter: grayscale(50%);
+		right: 20%;
+	}
+	40% {
+		opacity: 100%;
+		filter: grayscale(0%);
+		right: 40%;
+	}
+	60% {
+		right: 60%;
+	}
+	80% {
+		opacity: 50%;
+		filter: grayscale(50%);
+		right: 80%;
+	}
+	to {
+		opacity: 0%;
+		filter: grayscale(100%);
+		right: 100%;
+	}
+}
+
+#carousel img:nth-child(2) {
+	animation-delay: 2.5s;
+}
+
+#carousel img:nth-child(3) {
+	animation-delay: 5s;
+}
+
+#carousel img:nth-child(4) {
+	animation-delay: 7.5s;
+}
