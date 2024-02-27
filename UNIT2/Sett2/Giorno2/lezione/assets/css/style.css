@@ -5,3 +5,7 @@
 .card img, .modal-body img {
 	width: 50%;
 }
+
+.card h5 {
+	color: var(--bs-orange);
+}
