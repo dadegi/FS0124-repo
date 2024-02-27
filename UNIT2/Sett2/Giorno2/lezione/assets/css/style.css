@@ -1,0 +1,7 @@
+.navbar-brand img {
+	width: 100px;
+}
+
+.card img, .modal-body img {
+	width: 50%;
+}
