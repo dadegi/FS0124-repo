@@ -1,5 +1,36 @@
 h1 {
-  color: #000000;
+  color: navy;
+  font-size: 2rem !important;
 }
 
-/*# sourceMappingURL=style.css.map */
+h2 {
+  color: #3f3d3d;
+  font-size: 1.5rem !important;
+}
+
+header h1 {
+  color: white;
+}
+
+header h1:hover {
+  color: red;
+  cursor: pointer;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+p {
+  color: navy;
+  font-size: 2.5rem !important;
+}
+
+.paragrafo2 {
+  color: #00f;
+  border: 2px solid black;
+}
+
+th {
+  color: navy !important;
+}

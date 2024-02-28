@@ -1,0 +1,11 @@
+@import 'colori';
+
+h1 {
+	color: $colorePrimario;
+    font-size: 2rem !important;
+}
+
+h2 {
+    color: map-get($map: $setColori, $key: grigio);
+    font-size: 1.5rem !important;
+}
