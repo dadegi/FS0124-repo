@@ -1,0 +1,17 @@
+@import '../partials/colori';
+
+@mixin colorePrimario {
+    color: $colorePrimario !important;
+}
+
+@mixin testoInterno ($dimensione, $peso, $decorazione) {
+    font-style: italic;
+    text-decoration: $decorazione;
+    color: $testataHover;
+    font-size: $dimensione;
+    font-weight: $peso;
+}
+
+@mixin interpolazione ($proprieta, $valore) {
+    background-#{$proprieta}: $valore;
+}

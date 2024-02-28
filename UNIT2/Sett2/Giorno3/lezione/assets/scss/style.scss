@@ -1,17 +1,39 @@
 @import 'partials/header';
+@import 'mixins/mxins';
 
 $bordoParagrafo: 2px solid black;
 
 p {
-    color: $colorePrimario;
+    @include colorePrimario;
     font-size: 2.5rem !important;
+    span {
+        @include testoInterno(25px, bold, none);
+    }
+    @include interpolazione('color', gray);
 }
 
 .paragrafo2 {
     color: map-get($map: $setColori, $key: blu);
     border: $bordoParagrafo;
+    span {
+        @include testoInterno (20px, thin, underline);
+    }
+    @include interpolazione('image', url('https://cdn.pixabay.com/photo/2022/07/06/20/37/background-7306001_1280.jpg'));
 }
 
 th {
-    color: $colorePrimario !important;
+    @include colorePrimario;
+    background-color: map-get($map: $setColori, $key: grigio) !important;
+    color: $coloreTestata;
+}
+
+.seconda th {
+    @extend th;
+    font-size: 40px;
+}
+
+@for $i from 1 through 2 {
+    .table#{$i} {
+        margin: 50px * $i;
+    }
 }

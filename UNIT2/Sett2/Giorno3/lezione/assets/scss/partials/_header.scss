@@ -1,14 +1,12 @@
 @import 'titoli';
 
-header h1 {
-    color: $coloreTestata;
-}
-
-header h1:hover {
-    color: $testataHover;
-    cursor: pointer;
-}
-
 header {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
+	h1 {
+		color: $coloreTestata;
+		&:hover {
+			color: $testataHover;
+			cursor: pointer;
+		}
+	}
 }

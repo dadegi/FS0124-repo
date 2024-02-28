@@ -1,7 +1,8 @@
 @import 'colori';
+@import '../mixins/mxins';
 
 h1 {
-	color: $colorePrimario;
+	@include colorePrimario;
     font-size: 2rem !important;
 }
 
