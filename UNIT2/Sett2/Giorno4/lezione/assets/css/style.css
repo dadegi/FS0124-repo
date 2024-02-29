@@ -1,0 +1,25 @@
+header {
+    height: 150px;
+}
+
+.gradiente {
+    background-image: linear-gradient(to right, green 5%, white 50%, red);
+}
+
+.logo {
+    height: 100%;
+}
+
+.container-fluid .gradiente {
+    height: 50px;
+}
+
+#nascosto {
+    display: none;
+    flex-flow: column;
+    align-items: center;
+}
+
+#nascosto img {
+    width: 20%;
+}
