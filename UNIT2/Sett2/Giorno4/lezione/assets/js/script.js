@@ -701,3 +701,61 @@ const regioni = [
 		'prov_regione': 'VENETO',
 	},
 ];
+
+const menuRegioni = document.getElementById('regioni_menu');
+const menuProvince = document.getElementById('province_menu');
+const stemmi = document.getElementById('nascosto');
+let provinceReg = [];
+
+window.addEventListener('load', init);
+
+function init() {
+	menuProvince.setAttribute('disabled', 'true');
+	for (let i = 0; i < regioni.length; i++) {
+		let option = document.createElement('option');
+		option.setAttribute('value', regioni[i].prov_regione);
+		option.innerText = regioni[i].prov_regione;
+		menuRegioni.appendChild(option);
+	}
+}
+
+menuRegioni.addEventListener('change', function() {
+	let regione = this.value;
+	if (regione == '') {
+		stemmi.style.display = 'none';
+		menuProvince.innerHTML = '<option value="" selected></option>';
+		menuProvince.setAttribute('disabled', 'true');
+		return;
+	} else {
+		menuProvince.removeAttribute('disabled');
+		caricaProvince(regione);
+	}
+});
+
+function caricaProvince(regione) {
+	menuProvince.innerHTML = '<option value="" selected></option>';
+	provinceReg = province.filter(provincia => provincia.prov_reg == regione);
+	
+	// È come se avessimo scritto:
+	// for (let i = 0; i < province.length; i++) {
+	// 	if (province[i].prov_reg == regione) {
+	// 		provinceReg.push(province[i].prov_reg)
+	// 	}
+	// }
+	for (let i = 0; i < provinceReg.length; i++) {
+		let option = document.createElement('option');
+		option.setAttribute('value', provinceReg[i].prov_nome);
+		option.innerText = provinceReg[i].prov_nome;
+		menuProvince.appendChild(option);
+	}
+}
+
+menuProvince.addEventListener('change', function() {
+	let provincia = this.value;
+	if (provincia == '') {
+		stemmi.style.display = 'none';
+		return;
+	} else {
+		caricaImmagini(provincia);
+	}
+});
