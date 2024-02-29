@@ -509,6 +509,7 @@ const province = [
 		'prov_it': 'SS',
 		'prov_nome': 'SASSARI',
 		'prov_reg': 'SARDEGNA',
+		'prov_url': 'assets/img/regioni/sardegna.png',
 	},
 	{
 		'prov_it': 'SV',
@@ -720,6 +721,7 @@ function init() {
 }
 
 menuRegioni.addEventListener('change', function() {
+	stemmi.style.display= 'none';
 	let regione = this.value;
 	if (regione == '') {
 		stemmi.style.display = 'none';
@@ -759,3 +761,18 @@ menuProvince.addEventListener('change', function() {
 		caricaImmagini(provincia);
 	}
 });
+
+function caricaImmagini(provincia) {
+	stemmi.style.display= 'flex';
+	for (let i = 0; i < provinceReg.length; i++) {
+		let nome = provinceReg[i].prov_nome;
+		if (nome == provincia) {
+			let regione = provinceReg[i].prov_reg;
+			let stemmaReg = provinceReg[i].prov_url;
+			document.getElementById('nomeRegione').innerText = `La regione selezionata è ${regione}`;
+			document.getElementById('stemmaRegione').setAttribute('src', stemmaReg);
+			document.getElementById('nomeProvincia').innerText = `La provincia selezionata è ${nome}`;
+			document.getElementById('stemmaProvincia').setAttribute('src', `assets/img/province/${nome}.png`);
+		}
+	}
+}
