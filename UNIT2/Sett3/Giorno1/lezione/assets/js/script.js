@@ -92,6 +92,6 @@ const stampaOrdini = () => {
         colonna5.innerText = `${dettaglio.przFinale}`;
 		let riga = document.createElement('tr');
 		riga.append(colonna1, colonna2, colonna3, colonna4, colonna5);
-		ordine.append(riga);
+		ordine.appendChild(riga);
 	});
 };
