@@ -1,6 +1,7 @@
 const character = document.getElementById('character');
 const wait = document.getElementById('wait');
 const show = document.getElementById('show');
+let singleCharacter;
 let list = [];
 
 window.addEventListener('load', init);
@@ -39,9 +40,9 @@ character.addEventListener('change', function () {
 		wait.style.display = 'block';
 		show.style.display = 'none';
 		setTimeout(() => {
-			caricaDettagli(idCharacter).then(data => {
-				if (data && idCharacter) {
-					resolve(stampa(data));
+			caricaDettagli(idCharacter).then(() => {
+				if (singleCharacter && idCharacter) {
+					resolve(stampa(singleCharacter));
 				} else {
 					wait.style.display = 'none';
 					show.style.display = 'block';
@@ -60,8 +61,10 @@ async function caricaDettagli(id) {
 		response => {
 			return response.json();
 		}
-	);
-	return response;
+	).then(data => {
+        singleCharacter = data;
+        return singleCharacter;
+    });
 }
 
 const stampa = character => {
