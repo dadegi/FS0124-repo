@@ -19,6 +19,60 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
+		<header class="bg-dark text-danger sticky-top">
+			<div
+				class="container-fluid text-center d-flex justify-content-center align-items-center h-100">
+				<h1 class="w-100">LIBRERIA</h1>
+				<span class="float-end">
+					<i
+						class="bi bi-cart4 h1"
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal"></i>
+				</span>
+			</div>
+		</header>
+
+		<div class="container">
+			<div
+				class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 mt-3"
+				id="cards"></div>
+		</div>
+
+		<div
+			class="modal fade"
+			id="exampleModal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel">
+							Carrello
+						</h1>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row" id="cart">
+
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal">
+							Close
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<script src="assets/js/script.js"></script>
 	</body>
 </html>
