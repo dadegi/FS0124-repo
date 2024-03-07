@@ -1,3 +1,7 @@
 header {
     height: 100px;
 }
+
+.nero:hover {
+    background-color: black;
+}

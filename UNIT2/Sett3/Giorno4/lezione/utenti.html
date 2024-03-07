@@ -28,14 +28,14 @@
                     <form id="form">
                         <fieldset class="border border-dark p-4">
                             <label for="nome">NOME</label>
-                            <input type="text" class="form-control" id="nome" />
+                            <input type="text" class="form-control" id="nome" required />
                             <label for="cognome">COGNOME</label>
-                            <input type="text" class="form-control" id="cognome" />
-                            <button type="button" class="btn btn-success mt-5" id="submit">INVIA</button>
+                            <input type="text" class="form-control" id="cognome" required />
+                            <button type="submit" class="btn btn-success mt-5" id="submit">INVIA</button>
                             <button type="reset" class="btn btn-danger mt-5">CANCELLA</button>
                         </fieldset>
                     </form>
-                    <h4 id="errore"></h4>
+                    <h4 id="errore" class="text-bg-danger"></h4>
                 </div>
                 <div class="col-md-6 border-secondary border-start">
                     <h3 class="text-center mb-5">ELENCO GENERALE</h3>

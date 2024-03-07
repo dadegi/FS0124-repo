@@ -1,14 +1,19 @@
 {
-    "elenco": [
-        {
-            "id": 1,
-            "nome": "Antonio",
-            "cognome": "Copetti"
-        },
-        {
-            "id": 2,
-            "nome": "Elena",
-            "cognome": "Kekic"
-        }
-    ]
+  "elenco": [
+    {
+      "nome": "Fabio",
+      "cognome": "Brogi",
+      "id": 1
+    },
+    {
+      "nome": "Riccardo",
+      "cognome": "Del Piccolo",
+      "id": 2
+    },
+    {
+      "nome": "Simone",
+      "cognome": "Castelluccio",
+      "id": 3
+    }
+  ]
 }
