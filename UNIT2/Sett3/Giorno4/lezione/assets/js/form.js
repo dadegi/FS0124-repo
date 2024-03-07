@@ -1,3 +1,4 @@
+// Creazione costanti e variabili globali
 const nome = document.getElementById('nome');
 const cognome = document.getElementById('cognome');
 const btnSubmit = document.getElementById('submit');
@@ -8,12 +9,14 @@ const elenco = document.getElementById('elenco');
 const dataURL = 'http://localhost:3000/elenco/';
 let lista = [];
 
+// Gestione degli eventi al caricamento della finestra
 window.addEventListener('load', init);
 
 function init() {
 	readList();
 }
 
+// fetch get per la lettura della base dati
 async function readList() {
 	try {
 		let read = await fetch(dataURL);
@@ -31,6 +34,7 @@ async function readList() {
 	}
 }
 
+// Stampa della base dati a video
 const printData = () => {
 	vuoto.innerText = '';
 	lista.forEach(element => {
@@ -45,6 +49,7 @@ const printData = () => {
 	});
 };
 
+// Gestione del click per l'aggiunta di elementi
 btnSubmit.addEventListener('click', function (e) {
 	e.preventDefault();
 	if (checkValidity()) {
@@ -55,6 +60,7 @@ btnSubmit.addEventListener('click', function (e) {
     }
 });
 
+// Verifica della validità del form e del record da inserire
 const checkValidity = () => {
     let validity = true;
 	lista.forEach((item) => {
@@ -69,7 +75,9 @@ const checkValidity = () => {
     return validity;
 };
 
+// Aggiunta del record alla base dati
 const addItem = async () => {
+    // Oggetto creato a partire dal form, da inserire nella base dati
 	let item = {
 		nome: nome.value,
 		cognome: cognome.value,
@@ -88,6 +96,7 @@ const addItem = async () => {
 	}
 };
 
+// Cancellazione di un record dalla base dati
 const deleteItem = async id => {
 	try {
 		let response = await fetch(dataURL + id, {
