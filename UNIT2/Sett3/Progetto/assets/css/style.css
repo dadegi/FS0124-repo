@@ -1,0 +1,15 @@
+header {
+    height: 70px;
+}
+
+header img {
+    width: 50%;
+}
+
+header a:link, header a:visited {
+    color: white;
+}
+
+header a:hover {
+    color: aqua;
+}
