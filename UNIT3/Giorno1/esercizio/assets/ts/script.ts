@@ -1,0 +1,11 @@
+const userName = document.getElementById('name') as HTMLInputElement;
+const userSurname = document.getElementById('surname') as HTMLInputElement;
+const ricarica = document.getElementById('ricarica') as HTMLInputElement;
+const numCall = document.getElementById('numCall') as HTMLInputElement;
+const manage = document.getElementById('manage') as HTMLButtonElement;
+const resetCalls = document.getElementById('reset') as HTMLButtonElement;
+const manageUser = document.getElementById('manageUser') as HTMLHeadingElement;
+let nome: string;
+let cognome: string;
+let charge: number;
+let calls: number;

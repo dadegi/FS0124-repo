@@ -1,0 +1,11 @@
+var userName = document.getElementById('name');
+var userSurname = document.getElementById('surname');
+var ricarica = document.getElementById('ricarica');
+var numCall = document.getElementById('numCall');
+var manage = document.getElementById('manage');
+var resetCalls = document.getElementById('reset');
+var manageUser = document.getElementById('manageUser');
+var nome;
+var cognome;
+var charge;
+var calls;
