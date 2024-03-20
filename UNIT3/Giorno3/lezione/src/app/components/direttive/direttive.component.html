@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Lista</h2>
+    <div *ngIf="mostrare == 1">
+        <ul>
+            <span *ngFor="let item of items; let i = index">
+                <li *ngIf="i < 3">
+                    {{ i }}: {{ item.nome }} {{ item.cognome }} di anni
+                    {{ item.eta }}
+                </li>
+            </span>
+        </ul>
+    </div>
+    <div *ngIf="mostrare == 2">
+        <ul>
+            <li *ngFor="let product of products">
+                {{ product.nomeProd }}, categoria {{ product.categoria }},
+                prezzo € {{ product.prezzo }}
+            </li>
+        </ul>
+    </div>
+</div>
