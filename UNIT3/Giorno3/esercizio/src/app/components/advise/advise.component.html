@@ -1,0 +1,27 @@
+<div>
+    <div class="px-5 py-4 bg-body-secondary rounded-3">
+        <h5>Potrebbero piacerti:</h5>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let post of advised">
+                <a href="#">🔗 {{ post.title }}</a>
+                <br />
+                <span
+                    class="badge bg-primary me-1 text-uppercase"
+                    *ngFor="let tag of post.tags"
+                    >{{ tag }}</span
+                >
+                <br />
+                {{ post.reactions }} 👍
+            </li>
+        </ul>
+        <h5>Vedi anche:</h5>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="#">Post attivi</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Post inattivi</a>
+            </li>
+        </ul>
+    </div>
+</div>
