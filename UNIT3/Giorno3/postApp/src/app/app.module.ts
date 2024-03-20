@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ActivePostsComponent } from './components/active-posts/active-posts.component';
 import { InactivePostsComponent } from './components/inactive-posts/inactive-posts.component';
+import { PostCardComponent } from './components/post-card/post-card.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { InactivePostsComponent } from './components/inactive-posts/inactive-pos
     HeaderComponent,
     NavbarComponent,
     ActivePostsComponent,
-    InactivePostsComponent
+    InactivePostsComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule
