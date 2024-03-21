@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{post.title}} / ID Post: {{post.id}}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+                {{post.reactions}} 👍
+            </h6>
+            <p class="card-text">
+                {{post.body}}
+            </p>
+            <span
+                    class="badge bg-primary me-1 text-uppercase"
+                    *ngFor="let tag of post.tags"
+                    >{{ tag }}</span
+                >
+        </div>
+    </div>
+</div>
