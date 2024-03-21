@@ -15,12 +15,29 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="#"
+                    <a
+                        class="nav-link text-white"
+                        [routerLink]="['/']"
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}"
+                        >Home</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        class="nav-link text-white"
+                        [routerLink]="['/activePosts']"
+                        routerLinkActive="active"
                         >Post attivi</a
                     >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Post non attivi</a>
+                    <a
+                        class="nav-link text-white"
+                        [routerLink]="['/inactivePosts']"
+                        routerLinkActive="active"
+                        >Post non attivi</a
+                    >
                 </li>
             </ul>
         </div>
