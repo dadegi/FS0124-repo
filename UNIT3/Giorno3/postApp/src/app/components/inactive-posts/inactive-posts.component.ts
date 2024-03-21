@@ -16,7 +16,7 @@ export class InactivePostsComponent {
     }
 
     async getPosts() {
-        let response = await fetch('assets/db.json');
+        let response = await fetch('https://jsonplaceholder.typicode.com/todos');
         let data = await response.json();
         return data;
     }
