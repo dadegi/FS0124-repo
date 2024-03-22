@@ -12,7 +12,7 @@ export class PostDetailsComponent {
     post!: Post;
 
     constructor(private route: ActivatedRoute) {
-        this.postId = Number(this.route.snapshot.paramMap.get('id'));
+        this.postId = Number(this.route.snapshot.params['id']);
         this.getPost().then((data) => {
             this.post = data;
         });
