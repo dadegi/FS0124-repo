@@ -8,8 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'angular-easter';
     query = 'easter';
+    error: boolean = false
 
-    setQuery(data: string) {
-        this.query = data;
+
+    setQuery(data: {query: string, error: boolean}) {
+        this.query = data.query;
+        this.error = data.error;
     }
 }
