@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from './models/user';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -8,11 +9,13 @@ import { User } from './models/user';
 })
 export class AppComponent {
     title = 'Lista utenti';
-    users: User[] = [];
-    user!: User | null;
+    // users: User[] = [];
+    // user!: User | null;
 
-    onAddUser(user: User) {
-        this.users.push(user);
-        this.user = user;
-    }
+    // constructor(private router: Router) {}
+
+    // onAddUser(user: User) {
+    //     this.users.push(user);
+    //     this.user = user;
+    // }
 }
