@@ -1,0 +1,10 @@
+<div class="card mb-3">
+    <div class="card-header">
+        {{ element.name }} {{ element.surname }} di anni {{ element.eta }}
+    </div>
+    <div class="card-body">
+        <b [ngClass]="{'bg-success': element.sex === 'woman', 'bg-danger' : element.sex === 'man' }">
+            {{ element.sex }}
+        </b>
+    </div>
+</div>
