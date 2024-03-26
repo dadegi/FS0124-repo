@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ActivePostsComponent } from './components/active-posts/active-posts.component';
 import { InactivePostsComponent } from './components/inactive-posts/inactive-posts.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
 
 const routes: Route[] = [
     {
@@ -30,6 +32,10 @@ const routes: Route[] = [
         component: PostDetailsComponent,
     },
     {
+        path: 'editPost/:id',
+        component: EditPostComponent,
+    },
+    {
         path: '**',
         redirectTo: '',
     },
@@ -46,8 +52,9 @@ const routes: Route[] = [
         ActivePostsComponent,
         InactivePostsComponent,
         PostDetailsComponent,
+        EditPostComponent,
     ],
-    imports: [BrowserModule, RouterModule.forRoot(routes)],
+    imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
     providers: [],
     bootstrap: [AppComponent],
 })

@@ -14,6 +14,19 @@
                     *ngFor="let tag of post.tags"
                     >{{ tag }}</span
                 >
+                <br>
+                <a class="btn btn-warning mt-3" id="modify" [routerLink]="['/editPost/', post.id]">MODIFICA</a>
+                <hr />
+                <app-edit-post></app-edit-post>
+                <!-- <div *ngIf="modifyToggle()">
+                    <div class="d-flex flex-column">
+                        <input type="text" [(ngModel)]="post.title" class="card-title form-control">
+                        <textarea cols="30" rows="5" class="card-text form-control" [(ngModel)]="post.body"></textarea>
+                        <button class="btn btn-success mt-2" (click)="editPost()">SAVE</button>
+                      </div>
+                </div> -->
         </div>
     </div>
 </div>
+
+

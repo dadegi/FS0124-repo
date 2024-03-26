@@ -1,8 +1,8 @@
 export interface Post {
-    id: number;
+    id?: number;
     title: string;
     body: string;
-    reactions: number;
-    tags: Array<string>;
-    active: boolean;
+    reactions?: number;
+    tags?: Array<string>;
+    active?: boolean;
 }

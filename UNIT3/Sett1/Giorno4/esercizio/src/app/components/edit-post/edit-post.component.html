@@ -1,0 +1,16 @@
+<div class="d-flex flex-column">
+    <h4>Titolo:</h4>
+    <input
+        type="text"
+        [(ngModel)]="post.title"
+        class="card-title form-control"
+    />
+    <h4>Corpo del messaggio:</h4>
+    <textarea
+        cols="30"
+        rows="5"
+        class="card-text form-control mt-2"
+        [(ngModel)]="post.body"
+    ></textarea>
+    <!-- <button class="btn btn-success mt-2" (click)="editPost()">SAVE</button> -->
+</div>
