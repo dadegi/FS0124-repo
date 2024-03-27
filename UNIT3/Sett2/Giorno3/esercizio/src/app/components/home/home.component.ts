@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.sub = this.prodSrv.getProducts().subscribe(
             (res) => {
                 this.products = res.products;
-                console.log(this.products);
             },
             (error) => console.log(error)
         );
