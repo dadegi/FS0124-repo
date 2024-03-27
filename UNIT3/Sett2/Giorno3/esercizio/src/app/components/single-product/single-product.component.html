@@ -1,0 +1,17 @@
+<div class="card h-100">
+    <img
+      src="{{ product.thumbnail }}"
+      class="card-img-top"
+      alt="{{ product.id }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ product.title }}</h5>
+      <p class="card-text">{{ product.description | ellipsis }}</p>
+      <div class="d-flex justify-content-between">
+        <!-- <span (click)="addToCart(product)" class="btn btn-primary"
+          ><i class="bi bi-cart-check"></i> <b> ${{ product.price }} </b>
+        </span>
+        <button (click)="addToFavs(product)" [disabled]="isFav(product.id)" class="btn btn-danger"><i class="bi bi-heart-fill"></i></button> -->
+      </div>
+    </div>
+  </div>

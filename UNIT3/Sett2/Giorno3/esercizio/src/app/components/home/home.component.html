@@ -1,0 +1,9 @@
+<div class="container mt-5">
+    <div class="row">
+        <app-single-product
+            class="col-lg-4 mb-3"
+            [product]="prod"
+            *ngFor="let prod of products"
+        ></app-single-product>
+    </div>
+</div>
