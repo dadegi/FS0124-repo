@@ -1,0 +1,30 @@
+<div class="container mt-4">
+    <h1 class="text-center">Preferiti</h1>
+    <div class="container" *ngIf="myFavorites.length > 0; else elseTemplate">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let favorite of myFavorites">
+                <div class="card h-100">
+                    <img
+                        src="{{ favorite.thumbnail }}"
+                        class="card-img-top"
+                        alt="{{ favorite.id }}"
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title">{{ favorite.title }}</h5>
+                        <p class="card-text">{{ favorite.description }}</p>
+                        <button
+                            type="button"
+                            class="btn btn-danger"
+                            (click)="deleteFavorite(favorite.id)"
+                        >
+                            <i class="bi bi-heartbreak"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #elseTemplate>
+        <h3 class="text-center">Non ci sono prodotti preferiti</h3>
+    </ng-template>
+</div>

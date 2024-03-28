@@ -11,7 +11,13 @@
             <span (click)="addToCart(product)" class="btn btn-primary"
                 ><i class="bi bi-cart-check"></i> <b> ${{ product.price }} </b>
             </span>
-            <!-- <button (click)="addToFavs(product)" [disabled]="isFav(product.id)" class="btn btn-danger"><i class="bi bi-heart-fill"></i></button> -->
+            <button
+                (click)="addToFavs(product)"
+                [disabled]="isFav(product.id)"
+                [ngClass]="isFav(product.id) ? 'btn btn-success' : 'btn btn-danger'"
+            >
+                <i class="bi bi-heart-fill"></i>
+            </button>
         </div>
     </div>
 </div>

@@ -8,7 +8,7 @@ import { CartService } from 'src/app/services/cart.service';
     styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
-    cartList!: CartItem[];
+    cartList: CartItem[] = [];
     total!: number;
 
     constructor(private cartSrv: CartService) {}
@@ -17,11 +17,12 @@ export class CartComponent implements OnInit {
         this.cartSrv.myCart.subscribe((cart) => {
             this.cartList = cart;
             console.log(this.cartList);
+            this.totalPrice();
         });
     }
 
     totalPrice() {
-        return this.cartList.reduce((previous, current) => previous + current.totalPrice, 0);
+        this.total = this.cartList.reduce((previous, current) => previous + current.totalPrice, 0);
     }
 
     delete(id: number) {

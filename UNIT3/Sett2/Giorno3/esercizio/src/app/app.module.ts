@@ -8,11 +8,17 @@ import { HomeComponent } from './components/home/home.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { CartComponent } from './components/cart/cart.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 const routes: Route[] = [
     {
         path: '',
         component: HomeComponent
+    },
+    {
+        path: 'favorites',
+        component: FavoritesComponent
     }
 ]
 
@@ -22,7 +28,9 @@ const routes: Route[] = [
     HomeComponent,
     SingleProductComponent,
     EllipsisPipe,
-    CartComponent
+    CartComponent,
+    FavoritesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
